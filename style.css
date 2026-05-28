@@ -488,7 +488,7 @@ button { font-family: var(--font); }
   line-height: 1.45;
 }
 .service-feature::before {
-  content: 'â†’';
+  content: '\2192';
   color: var(--amber);
   font-weight: 700;
   flex-shrink: 0;
