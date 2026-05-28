@@ -1,21 +1,24 @@
 /* ============================================================
-   Aisle Five Advisory — style.css
+   Aisle Five Advisory â€” style.css
    ============================================================ */
 
-/* ── Google Fonts ───────────────────────────────────────── */
+/* â”€â”€ Google Fonts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* ── Design Tokens ──────────────────────────────────────── */
+/* â”€â”€ Design Tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
-  --navy:        #0F1E46;
-  --amber:       #D97706;
-  --amber-dark:  #B45309;
-  --amber-light: rgba(217, 119, 6, 0.12);
-  --gray-bg:     #F3F4F6;
+  --navy:        #1C2B35;   /* deep dark teal-navy */
+  --amber:       #C4715A;   /* terracotta coral â€” primary accent */
+  --amber-dark:  #a85e49;   /* darker coral for hover */
+  --amber-light: rgba(196, 113, 90, 0.12);
+  --gold:        #B8924A;   /* warm gold â€” secondary accent */
+  --cream:       #F7F2EC;   /* off-white â€” page background */
+  --steel:       #8BAAB8;   /* muted steel blue â€” body on dark */
+  --gray-bg:     #EDE8E0;   /* warm mist â€” section background */
   --white:       #ffffff;
-  --text-body:   #374151;
-  --text-muted:  #6b7280;
-  --border:      #e5e7eb;
+  --text-body:   #3D4E57;
+  --text-muted:  #6B7C85;   /* slate */
+  --border:      rgba(28,43,53,0.14);
   --shadow-sm:   0 1px 3px rgba(0,0,0,0.08);
   --shadow:      0 4px 14px rgba(0,0,0,0.08);
   --shadow-lg:   0 12px 32px rgba(0,0,0,0.10);
@@ -26,17 +29,17 @@
   --ease:        all 0.2s ease;
 }
 
-/* ── Reset ──────────────────────────────────────────────── */
+/* â”€â”€ Reset â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html  { scroll-behavior: smooth; }
 body  { font-family: var(--font); color: var(--text-body); line-height: 1.65;
-        background: var(--white); -webkit-font-smoothing: antialiased; }
+        background: var(--cream); -webkit-font-smoothing: antialiased; }
 img   { max-width: 100%; display: block; }
 a     { text-decoration: none; color: inherit; }
 ul    { list-style: none; }
 button { font-family: var(--font); }
 
-/* ── Layout Helpers ─────────────────────────────────────── */
+/* â”€â”€ Layout Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -45,9 +48,9 @@ button { font-family: var(--font); }
 .section        { padding: 92px 0; }
 .section-gray   { background: var(--gray-bg); }
 .section-navy   { background: var(--navy); }
-.section-white  { background: var(--white); }
+.section-white  { background: var(--cream); }
 
-/* ── Typography Helpers ─────────────────────────────────── */
+/* â”€â”€ Typography Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-label {
   display: inline-block;
   font-size: 0.72rem;
@@ -74,7 +77,7 @@ button { font-family: var(--font); }
 }
 .section-subtitle.light { color: rgba(255,255,255,0.68); }
 
-/* ── Buttons ────────────────────────────────────────────── */
+/* â”€â”€ Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .btn {
   display: inline-block;
   padding: 14px 30px;
@@ -125,7 +128,7 @@ button { font-family: var(--font); }
   position: sticky;
   top: 0;
   z-index: 900;
-  background: var(--white);
+  background: var(--cream);
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.2s ease;
 }
@@ -217,7 +220,7 @@ button { font-family: var(--font); }
   position: absolute;
   top: -40%; left: -15%;
   width: 55%; height: 180%;
-  background: radial-gradient(ellipse, rgba(217,119,6,0.07) 0%, transparent 68%);
+  background: radial-gradient(ellipse, rgba(196,113,90,0.09) 0%, transparent 68%);
   pointer-events: none;
 }
 .hero::after {
@@ -225,7 +228,7 @@ button { font-family: var(--font); }
   position: absolute;
   bottom: -30%; right: -10%;
   width: 50%; height: 150%;
-  background: radial-gradient(ellipse, rgba(255,255,255,0.025) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(184,146,74,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-inner {
@@ -243,7 +246,7 @@ button { font-family: var(--font); }
   color: var(--amber);
   margin-bottom: 22px;
   padding: 6px 16px;
-  border: 1px solid rgba(217,119,6,0.4);
+  border: 1px solid rgba(196,113,90,0.45);
   border-radius: 100px;
 }
 .hero h1 {
@@ -277,7 +280,7 @@ button { font-family: var(--font); }
   gap: 22px;
 }
 .pain-card {
-  background: var(--white);
+  background: var(--cream);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
@@ -339,8 +342,8 @@ button { font-family: var(--font); }
 }
 .gap-text p:last-child { margin-bottom: 0; }
 .gap-callout {
-  background: rgba(217,119,6,0.1);
-  border: 1px solid rgba(217,119,6,0.28);
+  background: rgba(196,113,90,0.1);
+  border: 1px solid rgba(196,113,90,0.28);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
 }
@@ -406,8 +409,8 @@ button { font-family: var(--font); }
   border-bottom: 1px solid var(--border);
 }
 .comp-tr:last-child { border-bottom: none; }
-.comp-tr:nth-child(even) { background: #fafafa; }
-.comp-tr:nth-child(odd)  { background: var(--white); }
+.comp-tr:nth-child(even) { background: var(--gray-bg); }
+.comp-tr:nth-child(odd)  { background: var(--cream); }
 
 .comp-td { padding: 20px 24px; font-size: 0.92rem; line-height: 1.55; }
 .td-stage {
@@ -439,7 +442,7 @@ button { font-family: var(--font); }
   gap: 22px;
 }
 .service-card {
-  background: var(--white);
+  background: var(--cream);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 36px 26px;
@@ -485,7 +488,7 @@ button { font-family: var(--font); }
   line-height: 1.45;
 }
 .service-feature::before {
-  content: '→';
+  content: 'â†’';
   color: var(--amber);
   font-weight: 700;
   flex-shrink: 0;
@@ -503,7 +506,7 @@ button { font-family: var(--font); }
   margin: 0 auto;
 }
 .team-card {
-  background: var(--white);
+  background: var(--cream);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 38px 30px;
@@ -536,7 +539,7 @@ button { font-family: var(--font); }
 .team-role {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--amber);
+  color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 16px;
@@ -587,7 +590,7 @@ footer p {
 }
 
 /* ============================================================
-   CONTACT PAGE — HERO
+   CONTACT PAGE â€” HERO
    ============================================================ */
 .contact-hero {
   background: var(--navy);
@@ -610,7 +613,7 @@ footer p {
   line-height: 1.68;
 }
 
-/* ── Calendar Embed ─────────────────────────────────────── */
+/* â”€â”€ Calendar Embed â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .calendar-section { padding: 72px 0; }
 .calendar-wrapper {
   max-width: 920px;
@@ -657,7 +660,7 @@ footer p {
 }
 .calendar-note a:hover { color: var(--amber-dark); }
 
-/* ── Contact Form ───────────────────────────────────────── */
+/* â”€â”€ Contact Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .contact-form-section { padding: 72px 0; }
 .contact-form-wrapper {
   max-width: 650px;
@@ -700,7 +703,7 @@ footer p {
   font-family: var(--font);
   font-size: 0.95rem;
   color: var(--text-body);
-  background: var(--white);
+  background: var(--cream);
   transition: border-color 0.2s, box-shadow 0.2s;
   outline: none;
   -webkit-appearance: none;
@@ -710,7 +713,7 @@ footer p {
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--amber);
-  box-shadow: 0 0 0 3px rgba(217,119,6,0.1);
+  box-shadow: 0 0 0 3px rgba(196,113,90,0.12);
 }
 .form-group input.error,
 .form-group textarea.error {
@@ -738,7 +741,7 @@ footer p {
 }
 
 /* ============================================================
-   RESPONSIVE — Tablet (≤ 900px)
+   RESPONSIVE â€” Tablet (â‰¤ 900px)
    ============================================================ */
 @media (max-width: 900px) {
   .services-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
@@ -746,7 +749,7 @@ footer p {
 }
 
 /* ============================================================
-   RESPONSIVE — Mobile (≤ 700px)
+   RESPONSIVE â€” Mobile (â‰¤ 700px)
    ============================================================ */
 @media (max-width: 700px) {
   .nav-toggle  { display: flex; }
@@ -755,7 +758,7 @@ footer p {
     position: absolute;
     top: 68px;
     left: 0; right: 0;
-    background: var(--white);
+    background: var(--cream);
     flex-direction: column;
     align-items: stretch;
     padding: 16px 22px 24px;
@@ -779,15 +782,15 @@ footer p {
 
   .section { padding: 64px 0; }
 
-  /* Pain points: 2 col → 1 col */
+  /* Pain points: 2 col â†’ 1 col */
   .pain-grid { grid-template-columns: 1fr; }
 
-  /* Team: 2 col → 1 col */
+  /* Team: 2 col â†’ 1 col */
   .team-grid { grid-template-columns: 1fr; max-width: 400px; }
 
   /* Services already handled at 900px */
 
-  /* Form row: 2 col → 1 col */
+  /* Form row: 2 col â†’ 1 col */
   .form-row { grid-template-columns: 1fr; }
 
   /* Calendar iframe height */
@@ -799,7 +802,7 @@ footer p {
 }
 
 /* ============================================================
-   RESPONSIVE — Comparison Table
+   RESPONSIVE â€” Comparison Table
    ============================================================ */
 @media (max-width: 640px) {
   .comp-thead { display: none; }
@@ -809,7 +812,7 @@ footer p {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    background: var(--white) !important;
+    background: var(--cream) !important;
   }
   .td-stage {
     display: block;
